@@ -632,6 +632,7 @@ class FormulaLSTMAttentionDecoder(nn.Module):
         self,
         tgt: torch.Tensor,
         memory: torch.Tensor,
+        tgt_key_padding_mask=None,
     ) -> torch.Tensor:
         """
         Teacher-forced decoding.
